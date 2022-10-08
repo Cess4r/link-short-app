@@ -1,6 +1,7 @@
 import type { LoaderArgs } from '@remix-run/node';
 import { json } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
+import './css/style.css';
 
 export async function loader({ request }: LoaderArgs) {
 	const url = new URL(request.url);
@@ -19,7 +20,7 @@ export default function Index() {
 	const { error, success } = useLoaderData();
 
 	return (
-		<main>
+		<main className='nn'>
 			<form method="post" action="/url">
 				<h1>Acorta tu URL</h1>
 
