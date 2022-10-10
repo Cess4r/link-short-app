@@ -8,7 +8,8 @@ import {
   ScrollRestoration,
 } from "@remix-run/react";
 
-import globalStyles from '~/styles/global.css'
+import globalStyles from 'css/styles.css'
+import backg from './imges/backgre.png'
 
 export const links =()=>([
   {
@@ -23,7 +24,6 @@ export const meta: MetaFunction = () => ({
   viewport: "width=device-width,initial-scale=1",
 });
 
-
 export default function App() {
   return (
     <html lang="en">
@@ -31,7 +31,7 @@ export default function App() {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body style={{backgroundImage: `url(${backg})`}}>
         <Outlet />
         <ScrollRestoration />
         <Scripts />

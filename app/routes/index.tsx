@@ -21,12 +21,16 @@ export default function Index() {
 	const { error, success } = useLoaderData();
 
 	return (
-		<main className='nn'>
+		<main>
+			
 			<form method="post" action="/url">
-				<h1>Acorta tu URL</h1>
+				<div className='titl'>
+					<h1>Link-Short</h1>
+					<p>Acorta tu URL</p>
+				</div>
 
-				<label htmlFor="original">
-					<span>URL original</span>
+				<label htmlFor="original" >
+					<span className='original'>URL original</span>
 					<input
 						type="text"
 						name="original"
@@ -35,7 +39,7 @@ export default function Index() {
 					/>
 				</label>
 				<label htmlFor="short">
-					<span>URL acortada</span>
+					<span className='corta'>URL acortada</span>
 					<input
 						type="text"
 						name="short"
@@ -43,25 +47,25 @@ export default function Index() {
 						placeholder="Ejemplo: gle"
 					/>
 				</label>
-				<button type="submit">Acortar</button>
-
-				<span className="success">
-					{success && (
-						<p>
-							¡Listo! Tu URL acortada es{' '}
-							<a href={`/${success}`}>{`${success}`}</a>
-						</p>
-					)}
-				</span>
-
-				<span className="error">
-					{error === 'missing' && (
-						<p className="error">Por favor, llena todos los campos</p>
-					)}
-					{error === 'unavailable' && (
-						<p className="error">Ese nombre ya está en uso</p>
-					)}
-				</span>
+				<div className='down'>
+					<button type="submit">Acortar</button>
+					<span className="success">
+						{success && (
+							<p>
+								¡Listo! Tu URL acortada es{' '}
+								<a href={`/${success}`}>{`${success}`}</a>
+							</p>
+						)}
+					</span>
+					<span className="error">
+						{error === 'missing' && (
+							<p className="error">Por favor, llena todos los campos</p>
+						)}
+						{error === 'unavailable' && (
+							<p className="error">Ese nombre ya está en uso</p>
+						)}
+					</span>
+				</div>
 			</form>
 		</main>
 	);
