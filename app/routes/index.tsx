@@ -36,6 +36,7 @@ export default function Index() {
 						name="original"
 						id="original"
 						placeholder="Ejemplo: google.com"
+						autoComplete="off"
 					/>
 				</label>
 				<label htmlFor="short">
@@ -45,6 +46,7 @@ export default function Index() {
 						name="short"
 						id="short"
 						placeholder="Ejemplo: gle"
+						autoComplete="off"
 					/>
 				</label>
 				<div className='down'>
@@ -52,8 +54,8 @@ export default function Index() {
 					<span className="success">
 						{success && (
 							<p>
-								¡Listo! Tu URL acortada es{' '}
-								<a href={`/${success}`}>{`${success}`}</a>
+								¡Listo! Tu URL acortada es...{' '}
+								<a href={`/${success}`} target={'_blank'} rel="noreferrer">{`${success}`}</a>
 							</p>
 						)}
 					</span>
