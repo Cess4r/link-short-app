@@ -1,5 +1,8 @@
 # Welcome to Link-Short!
-This is an application that allows you to shorten the links you want by entering the link you want to shorten and then the name you want to give the new link
+This is an application that allows you to shorten the links you want by entering the link you want to shorten and then the name you want to give the new link🔗
+
+
+<img src="https://github.com/Cess4r/link-short-app/blob/master/link-shortgif.gif" height="400px" weigth="400px"/>
 
 ## Development
 
